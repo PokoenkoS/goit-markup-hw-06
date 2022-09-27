@@ -309,7 +309,7 @@ fill:rgba(0, 0, 0, 1);
  
 }
 .btn-close {
-    
+   position: absolute;
     margin: 8px 8px 0 490px;
     
    display: flex;
@@ -321,21 +321,120 @@ fill:rgba(0, 0, 0, 1);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.btn-close .close:hover {
+fill: var(--accent-color)
+}
 .form {
     display: flex;
 }
 .modal-form {
-   
-    width: 448px;
-   margin-left: auto;
+   position: fixed;
+ margin-left: auto;
    margin-right: auto;
    padding: 40px;
    
 }
 .form-field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+  position: relative;  
+ width: 448px
+
+}
+
+.modal-title {
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+color: var(--primary-text-color);
+width: 448px;
+}
+
+.modal-icon {
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px; 
+  transform: translateY(-50%);
+  fill: var(--primary-text-color);
+  top: 60%;
+  left: 12px;
+}
+
+.form-field:focus-within > .modal-icon {
+fill: var(--accent-color);
+}
+
+.form-field:focus-within > .modal-input {
+outline: none;
+border: 1px solid var(--accent-color);
+} 
+
+.modal-input {
+width: 448px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+height: 40px; 
+margin-bottom: 10px;
+margin-top: 0;
+padding-left: 42px;
+}
+
+.form-label {
+font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: var(--secondary-text-color);
+}
+.button-form {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+width: 200px;
+height: 50px;
+background: #2196F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+font-family: Roboto, sans-serif;
+align-items: center;
+letter-spacing: 0.06em;
+color: var(--text-color-white);
+border: none;
+cursor: pointer;
+padding: 10px 52px;
+}
+.form-textarea {
+   margin-bottom: 20px;
+}
+.comment {
+resize: none;
+width: 448px;
+height: 120px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+padding: 12px 16px;
+
+}
+
+.comment:focus {
+outline: none;
+border: 1px solid #2196F3;
+}
+
+::placeholder {
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
+.terms {
+    color: var(--accent-color);
+}
+.policy {
+   
 }
 /* Секції */
 
@@ -676,10 +775,6 @@ margin-right: 0;
     height: 86px;
     
 }
-.footer-form {
-   
-} 
-
 
 .btn-footer {
     display: inline-flex;
