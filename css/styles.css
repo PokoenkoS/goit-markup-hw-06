@@ -165,8 +165,7 @@ align-items: center;
 }
 
 .tel {
- 
-color: var(--secondary-text-color);
+ color: var(--secondary-text-color);
 text-decoration: none;
 transition: 250ms var(--timing-function);
 
@@ -179,8 +178,7 @@ transition: 250ms var(--timing-function);
 }
 .phone-icon {
  margin-right: 10px;
- 
- fill: currentColor;
+  fill: currentColor;
 }
 
 .site-contact .item .phone-icon:hover {
@@ -306,13 +304,12 @@ border: none;
  
 background:var(--text-color-white);
 fill:rgba(0, 0, 0, 1);
- 
+transition: 250ms var(--timing-function); 
 }
 .btn-close {
    position: absolute;
     margin: 8px 8px 0 490px;
-    
-   display: flex;
+       display: flex;
    align-items: center;
     justify-content: center;
     width: 30px;
@@ -320,10 +317,14 @@ fill:rgba(0, 0, 0, 1);
     background-color: var(--text-color-white);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+   
 }
 .btn-close .close:hover {
+    transition: 250ms var(--timing-function);
 fill: var(--accent-color)
+
 }
+
 .form {
     display: flex;
 }
@@ -357,15 +358,18 @@ width: 448px;
   fill: var(--primary-text-color);
   top: 60%;
   left: 12px;
+  transition: 250ms var(--timing-function);
 }
 
 .form-field:focus-within > .modal-icon {
 fill: var(--accent-color);
+transition: 250ms var(--timing-function);
 }
 
 .form-field:focus-within > .modal-input {
 outline: none;
 border: 1px solid var(--accent-color);
+transition: 250ms var(--timing-function);
 } 
 
 .modal-input {
@@ -376,6 +380,7 @@ height: 40px;
 margin-bottom: 10px;
 margin-top: 0;
 padding-left: 42px;
+transition: 250ms var(--timing-function);
 }
 
 .form-label {
@@ -405,9 +410,7 @@ border: none;
 cursor: pointer;
 padding: 10px 52px;
 }
-.form-textarea {
-   margin-bottom: 20px;
-}
+
 .comment {
 resize: none;
 width: 448px;
@@ -415,12 +418,13 @@ height: 120px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 padding: 12px 16px;
-
+transition: 250ms var(--timing-function);
 }
 
 .comment:focus {
 outline: none;
 border: 1px solid #2196F3;
+transition: 250ms var(--timing-function);
 }
 
 ::placeholder {
@@ -433,9 +437,57 @@ color: rgba(117, 117, 117, 0.5);
 .terms {
     color: var(--accent-color);
 }
-.policy {
-   
+
+.label{
+    display: inline-block;
+    align-items: center;
+    padding-left: 36px;
+    margin-top: 20px;
+     
 }
+
+
+.checkbox {
+ position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+left: 0;
+
+}
+
+.checkbox:checked + .icon-check {
+ border-color: transparent;
+ background-color: var(--accent-color); 
+ background-image: url(../images/check\ \(1\).svg);
+ background-size: contain;
+ background-origin: border-box ;
+ width: 16px;
+ height: 15px;
+ margin-top: 3px;
+ 
+}
+
+
+.icon-check {
+ margin-right: 10px;
+display: inline-block;
+width: 16px;
+height: 15px;
+border: 2px solid var(--primary-text-color);
+border-radius: 2px;
+position: absolute;
+left: 54px;
+outline: none;
+margin-top: 3px;
+}
+
 /* Секції */
 
 .section {
