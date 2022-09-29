@@ -299,6 +299,7 @@ border: none;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function);
     flex-direction: column;
+    padding: 40px;
 }
 .close {
  
@@ -308,8 +309,8 @@ transition: 250ms var(--timing-function);
 }
 .btn-close {
    position: absolute;
-    margin: 8px 8px 0 490px;
-       display: flex;
+    
+    display: flex;
    align-items: center;
     justify-content: center;
     width: 30px;
@@ -317,6 +318,8 @@ transition: 250ms var(--timing-function);
     background-color: var(--text-color-white);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    left: 490px;
+    top: 8px;
    
 }
 .btn-close .close:hover {
@@ -329,10 +332,10 @@ fill: var(--accent-color)
     display: flex;
 }
 .modal-form {
-   position: fixed;
+   
  margin-left: auto;
    margin-right: auto;
-   padding: 40px;
+   
    
 }
 .form-field {
@@ -347,6 +350,7 @@ font-size: 20px;
 line-height: 1.15;
 color: var(--primary-text-color);
 width: 448px;
+margin-bottom: 12px;
 }
 
 .modal-icon {
@@ -388,6 +392,7 @@ font-size: 12px;
 line-height: 1.16;
 letter-spacing: 0.01em;
 color: var(--secondary-text-color);
+margin-bottom: 4px;
 }
 .button-form {
 display: block;
@@ -410,7 +415,10 @@ border: none;
 cursor: pointer;
 padding: 10px 52px;
 }
-
+.form-textarea {
+    display: flex;
+    flex-direction: column;
+}
 .comment {
 resize: none;
 width: 448px;
@@ -470,8 +478,8 @@ left: 0;
  background-origin: border-box ;
  width: 16px;
  height: 15px;
- margin-top: 3px;
- 
+
+ left: 52px;
 }
 
 
@@ -483,9 +491,9 @@ height: 15px;
 border: 2px solid var(--primary-text-color);
 border-radius: 2px;
 position: absolute;
-left: 54px;
+left: 52px;
 outline: none;
-margin-top: 3px;
+
 }
 
 /* Секції */
@@ -784,10 +792,8 @@ transition: 250ms var(--timing-function);
     width: 206px;
     display: flex;
     flex-wrap: wrap;
-    margin-right: 93px;
-    
-    
-}
+    margin-right: auto;
+ }
 
 .footer-icons {
     display: flex;
@@ -828,11 +834,49 @@ margin-right: 0;
     
 }
 
+.footer-form {
+    display: inline-block;
+    position: relative;
+   
+}
+.mail-input {
+    width: 358px;
+    height: 50px;
+    background: #2F303A;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 16px;
+    color: var(--button-background-color);
+}
+.label-mail {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+color: rgba(255, 255, 255, 0.6);
+display: flex;
+align-items: center;
+opacity: 1;
+transition: 250ms var(--timing-function);
+}
+.mail-input:focus + .label-mail {
+    opacity: 0;
+    transition: 250ms var(--timing-function);
+}
+.mail-input:hover + .label-mail{
+    opacity: 0;
+    transition: 250ms var(--timing-function);
+}
+ 
+ 
 .btn-footer {
     display: inline-flex;
     border: none;
     border-radius: 4px;
-     width: 200px;
+    width: 200px;
     height: 50px;
     background-color: var(--accent-color);
     font-weight: 700;
@@ -840,59 +884,17 @@ margin-right: 0;
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--text-color-white);
-    
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 28px;
+    padding: 10px 28px;
     cursor: pointer;
-    
-}
-
-.fly {
- display: inline-flex;
-  margin-left: 10px;
- 
-  
-}
-.form {
-    display: inline-block;
     position: relative;
-   
 }
-.mail-input {
-    
-    width: 358px;
-    height: 50px;
-    background: #2F303A;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    
-}
-.mail-input:focus +.label-mail {
-  opacity: 0;
-   
-}
-
-.label-mail {
+.fly {
     position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    left: 148px;
+    top: 13px;
     
-}
-.text-label {
-font-weight: 400;
-font-size: 16px;
-line-height: 1.25;
-color: rgba(255, 255, 255, 0.6);
-display: flex;
-align-items: center;
+  }
 
-}
-
-/* .mail-input:focus+ .label-mail{
-    transform: translateY(-50%);
-} */
 /* стилі для portfolio.html */
 
 
